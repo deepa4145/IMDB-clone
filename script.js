@@ -272,7 +272,7 @@ async function showFavMovieList() {
         Nothing To Show</h1> </div>`
     } else {
         for (let i = 0; i < FavList.length; i++) {
-            const favmovieList = await fetchMoviesFromApi(url, FavList[i]);
+            const favmovieList = await fetchMovies(url, FavList[i]);
             if (favmovieList) {
                 let element = favmovieList;
                 html += `

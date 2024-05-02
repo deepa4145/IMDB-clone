@@ -150,7 +150,7 @@ async function showMovieDetails(itemId, searchInput) {
     flexBox.scrollTo({ top: 0, behavior: "smooth" });
     const url = "https://www.omdbapi.com/?apikey=7b6b319d&i=";
     const searchUrl = "https://www.omdbapi.com/?apikey=7b6b319d&s=";
-    const movieList = await fetchMoviesFromApi(searchUrl,searchInput);
+    const movieList = await fetchMovies(searchUrl,searchInput);
     console.log('Movieslist:',movieList);
     let html = ''
     const movieDetails = await fetchMovies(url, itemId);

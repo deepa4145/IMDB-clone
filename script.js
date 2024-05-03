@@ -110,8 +110,6 @@ async function showMovieList() {
     }
 }
 
-
-
 /*addRemoveToFavList - function to add or remove a movie from the favorite list
   The id of the movie to be added or removed
   This function first retrieves the data from local storage and then it checks if the provided movie id already exist in the favorite list.
@@ -159,6 +157,7 @@ async function showMovieDetails(itemId, searchInput) {
         <div class="container remove-top-margin">
             <div class="header hide">
                 <div class="title">
+                Let's Do Something New
                     </div>
             </div>
             <div class="fixed" id="search-bar">
@@ -222,11 +221,13 @@ async function showMovieDetails(itemId, searchInput) {
         <div class="card-name">
         Related Items
     </div>
-    <div id="card-holder" class=" remove-top-margin ">`
+    <div id="card-holder" class=" remove-top-margin ">
+    `
     }
     if( movieList.Search){
         html += movieList.Search.map(element => {
-            return ` <div class="card">
+            return ` 
+            <div class="card">
                 <div class="card-top"  onclick="showMovieDetails('${element.imdbID}', '${searchInput}')">
                     <div class="movie-poster" >
                     <img src="${element.Poster=='N/A' ? 'maidaan.jpg' : element.Poster}" alt="">
@@ -241,11 +242,12 @@ async function showMovieDetails(itemId, searchInput) {
                  </div>
                 <div class="card-bottom>
                     <div class="like">
-                        <Span> Add to Favoruite: </Span>
+                        <Strong> Add to Favoruite: </Strong>
                          <i class="fa-solid fa-star ${favList(list, element.imdbID) ? 'active' : ''} " onclick="addRemoveToFavList('${element.imdbID}')"></i>
                     </div>
                 </div>
-            </div>`
+            </div>
+            `
         }).join('');
     }
 

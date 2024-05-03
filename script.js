@@ -1,4 +1,4 @@
-/* Get the DOM elements for toggle button, sidebar, flex-box, searchbar */
+/* Get the DOM elements for toggle button, sidebar, left-panel, searchbar */
 
  const toggleButton = document.getElementById("toggle-sidebar");
  const flexBox = document.getElementById('left-panel');

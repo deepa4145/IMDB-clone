@@ -72,7 +72,7 @@ const fetchMovies= async (url, value) => {
 }
 
 /* showMovieList - function to show movie list based on search input.This function first retrieves the data from local storage and then it fetches the movies data from API 
- using the fetchMoviesFromApi function. It then maps over the movies data and creates the HTML template  for each movie. This HTML template is then added to the DOM.*/
+ using the fetchMovies function. It then maps over the movies data and creates the HTML template  for each movie. This HTML template is then added to the DOM.*/
 
 async function showMovieList() {
     const list = JSON.parse(localStorage.getItem(objectEle));
